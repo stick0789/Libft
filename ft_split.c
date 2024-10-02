@@ -6,7 +6,7 @@
 /*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 18:06:21 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/23 22:07:18 by jaacosta         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:14:04 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -67,7 +67,7 @@ static void	fill_words(char **words, char const *s, char c)
 		{
 			if (s[end + 1] == '\0')
 				end++;
-			if (end > start)
+			if (end > start && word_index < count_words(s, c))
 			{
 				words[word_index] = create_word(s + start, end - start);
 				word_index++;
@@ -84,6 +84,14 @@ char	**ft_split(char const *s, char c)
 	int		word_count;
 	char	**result;
 
+	if (*s == '\0')
+	{
+		result = (char **)malloc((word_count + 1) * sizeof(char *));
+		if (!result)
+			return (NULL);
+		result[0] = NULL;
+		return (result);
+	}
 	word_count = count_words(s, c);
 	result = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!result)
@@ -94,25 +102,38 @@ char	**ft_split(char const *s, char c)
 /*
 #include <stdio.h>
 int main() {
-    char *s = "Hola, mundo! Esto es una prueba.";
+    char *s = "hola mundo de mier";
     char c = ' ';
     char **result;
+    int i;
 
     result = ft_split(s, c);
 
-    if (result == NULL) {
+    if (result == NULL) 
+    {
         printf("Error: no se pudo dividir la cadena.\n");
         return 1;
     }
 
-    printf("Palabras encontradas:\n");
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("%s\n", result[i]);
+    if (result[0] == NULL)
+        printf("Palabras encontradas: %s\n", result[0]);
+    else 
+    {
+        printf("Palabras encontradas:\n");
+        i = 0;
+        while (result[i] != NULL)
+        {
+            printf("%s\n", result[i]);
+            i++;
+        }
     }
 
     // Libera la memoria para cada palabra y luego para el arreglo result
-    for (int i = 0; result[i] != NULL; i++) {
+    i = 0;
+    while (result[i] != NULL)
+    {
         free(result[i]);
+        i++;
     }
     free(result);
 

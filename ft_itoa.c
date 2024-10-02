@@ -6,7 +6,7 @@
 /*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 22:11:14 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/26 16:25:22 by jaacosta         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:55:22 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,7 +29,7 @@ static int	ft_len(int n)
 	return (len);
 }
 
-static void	ft_putn_save(int n, char *s, int *i)
+static void	ft_putn_save(long int n, char *s, int *i)
 {
 	if (n > 9)
 	{
@@ -45,18 +45,20 @@ char	*ft_itoa(int n)
 	char	*s;
 	int		i;
 	int		len;
+	long int	nbr;
 
+	nbr = (long int)n;
 	len = ft_len(n);
 	s = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s)
 		return (NULL);
 	i = 0;
-	if (n < 0)
+	if (nbr < 0)
 	{
 		s[i++] = '-';
-		n *= -1;
+		nbr *= -1;
 	}
-	ft_putn_save(n, s, &i);
+	ft_putn_save(nbr, s, &i);
 	s[i] = '\0';
 	return (s);
 }
