@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 20:29:46 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 20:02:03 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:58:30 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

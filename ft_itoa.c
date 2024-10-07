@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 22:11:14 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/10/01 18:55:22 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:51:16 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -42,9 +42,9 @@ static void	ft_putn_save(long int n, char *s, int *i)
 
 char	*ft_itoa(int n)
 {
-	char	*s;
-	int		i;
-	int		len;
+	char		*s;
+	int			i;
+	int			len;
 	long int	nbr;
 
 	nbr = (long int)n;

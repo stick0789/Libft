@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 18:06:21 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/10/01 13:14:04 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 20:42:43 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -84,6 +84,7 @@ char	**ft_split(char const *s, char c)
 	int		word_count;
 	char	**result;
 
+	word_count = 0;
 	if (*s == '\0')
 	{
 		result = (char **)malloc((word_count + 1) * sizeof(char *));
@@ -98,6 +99,19 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	fill_words(result, s, c);
 	return (result);
+}
+
+void	free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i] != NULL)
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
 /*
 #include <stdio.h>
@@ -129,13 +143,14 @@ int main() {
     }
 
     // Libera la memoria para cada palabra y luego para el arreglo result
-    i = 0;
-    while (result[i] != NULL)
-    {
-        free(result[i]);
-        i++;
-    }
-    free(result);
+    //i = 0;
+    //while (result[i] != NULL)
+    //{
+    //    free(result[i]);
+    //    i++;
+    //}
+    //free(result);
+    free_split(result);
 
     return 0;
 }

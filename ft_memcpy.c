@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 18:33:47 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 20:04:17 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:50:12 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

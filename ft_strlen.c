@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 16:03:23 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 20:08:32 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:53:59 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

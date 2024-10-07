@@ -6,7 +6,7 @@
 #    By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 18:02:27 by jaacosta          #+#    #+#              #
-#    Updated: 2024/09/25 18:13:15 by jaacosta         ###   ########.fr        #
+#    Updated: 2024/10/03 19:20:40 by jaacosta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar -rcs
-RM = rm - f
+RM = rm -f
 
 SRCS = ft_strlen.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	   ft_isprint.c ft_tolower.c ft_toupper.c ft_strncmp.c ft_strchr.c \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 19:40:08 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 19:59:52 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:10 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:49:05 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"

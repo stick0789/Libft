@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 17:20:41 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 20:03:13 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:50:29 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,11 +18,10 @@ void	*ft_memset(void *b, int c, size_t n)
 
 	p = (unsigned char *)b;
 	i = 0;
-	while (i < n)
+	while (n-- > 0)
 	{
 		p[i] = c;
 		i++;
 	}
-	p[i] = '\0';
 	return (b);
 }

@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 20:18:32 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/24 20:10:08 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:10 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/07 16:57:11 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_occurrence;
+	const char		*last_occurrence;
+	unsigned char	uc;
 
 	last_occurrence = NULL;
+	uc = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == uc)
 			last_occurrence = s;
 		s++;
+	
 	}
+	if (uc == '\0')
+		return ((char *)s);
 	return ((char *)last_occurrence);
 }

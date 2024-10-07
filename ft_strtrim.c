@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 20:16:04 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/09/20 18:03:25 by jaacosta         ###   ########.fr       */
+/*   Created: 2024/10/05 17:35:10 by jaacosta          #+#    #+#             */
+/*   Updated: 2024/10/05 19:49:51 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
