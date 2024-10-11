@@ -6,12 +6,12 @@
 /*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/10/05 19:51:16 by jaacosta         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:08:29 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	ft_len(int n)
+static int	ft_len(long int n)
 {
 	int	len;
 
@@ -21,7 +21,7 @@ static int	ft_len(int n)
 		n *= -1;
 		len++;
 	}
-	if (n > 9)
+	while (n > 9)
 	{
 		n /= 10;
 		len++;
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 	long int	nbr;
 
 	nbr = (long int)n;
-	len = ft_len(n);
+	len = ft_len(nbr);
 	s = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s)
 		return (NULL);

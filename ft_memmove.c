@@ -6,7 +6,7 @@
 /*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/10/05 19:54:38 by jaacosta         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:37:01 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	s = (unsigned char *)src;
 	d = dest;
-	if (!d || !s)
+	if (!d && !s)
 		return (NULL);
 	if (d < s)
 	{

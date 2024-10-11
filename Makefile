@@ -6,7 +6,7 @@
 #    By: jaacosta <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 18:02:27 by jaacosta          #+#    #+#              #
-#    Updated: 2024/10/03 19:20:40 by jaacosta         ###   ########.fr        #
+#    Updated: 2024/10/09 19:10:20 by jaacosta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME):	$(OBJS) libft.h
 clean:
 		$(RM) $(OBJS)
 
-fclean:
+fclean:		clean
 		$(RM) $(NAME) $(OBS)
 
 re:

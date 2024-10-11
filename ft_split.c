@@ -6,7 +6,7 @@
 /*   By: jaacosta <jaacosta@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 17:35:05 by jaacosta          #+#    #+#             */
-/*   Updated: 2024/10/05 20:42:43 by jaacosta         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:24:32 by jaacosta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -65,7 +65,7 @@ static void	fill_words(char **words, char const *s, char c)
 	{
 		if (s[end] == c || s[end + 1] == '\0')
 		{
-			if (s[end + 1] == '\0')
+			if (s[end] != c && s[end + 1] == '\0')
 				end++;
 			if (end > start && word_index < count_words(s, c))
 			{
@@ -100,8 +100,8 @@ char	**ft_split(char const *s, char c)
 	fill_words(result, s, c);
 	return (result);
 }
-
-void	free_split(char **split)
+/*
+static void	free_split(char **split)
 {
 	int	i;
 
@@ -113,7 +113,7 @@ void	free_split(char **split)
 	}
 	free(split);
 }
-/*
+
 #include <stdio.h>
 int main() {
     char *s = "hola mundo de mier";
